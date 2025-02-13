@@ -3,13 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const displayDiv = document.createElement("div");
     document.body.appendChild(displayDiv);
-
-    function updateTime() {
-        const currentTime = new Date().toLocaleString();
-        displayDiv.innerText = `request time: ${currentTime}`;
-    }
-
-    updateTime();
-    setInterval(updateTime, 1000);
+    const currentTime = new Date().toLocaleString();
+    displayDiv.innerText = `request time: ${currentTime}`;
 });
 </script>
