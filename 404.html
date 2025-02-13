@@ -1,14 +1,15 @@
 <h1>inaccessible</h1>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const currentTime = new Date().toLocaleString();
-            
     const displayDiv = document.createElement("div");
+    document.body.appendChild(displayDiv);
 
-    while (true) {
+    function updateTime() {
+        const currentTime = new Date().toLocaleString();
         displayDiv.innerText = `request time: ${currentTime}`;
-                
-        document.body.appendChild(displayDiv);
     }
+
+    updateTime();
+    setInterval(updateTime, 1000);
 });
 </script>
